@@ -1,0 +1,131 @@
+/* 1. Variables & Reset */
+:root {
+    --primary: #17365d;
+    --accent: #4385c5;
+    --bg: #f1f4f8;
+    --text: #303846;
+    --border: #e2e8f0;
+    --max-w: 900px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 35px 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* 2. Resume header */
+header {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 35px 25px;
+    text-align: center;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 12px 12px 0 0;
+}
+
+header h1 {
+    margin: 0 0 8px;
+    font-size: 34px;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 6px 0;
+}
+
+header a {
+    color: #d7e8ff;
+    text-decoration: none;
+}
+header a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* 3. Main content */
+main {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 25px 35px;
+    background-color: white;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 8px 25px rgba(25, 45, 75, 0.08);
+}
+
+/* 4. Sections */
+section {
+    margin-bottom: 28px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--border);
+}
+section:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+section h2 {
+    margin: 0 0 14px;
+    padding-left: 12px;
+    color: var(--primary);
+    font-size: 22px;
+    border-left: 4px solid var(--accent);
+}
+
+/* 5. Text */
+p { margin: 6px 0 10px; }
+ul { padding-left: 25px; margin-top: 8px; }
+li { padding-left: 4px; margin-bottom: 6px; }
+li::marker { color: var(--accent); }
+
+/* 6. Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #dce3ec;
+}
+th {
+    background-color: #eaf1f8;
+    color: var(--primary);
+}
+tr:nth-child(even) { background-color: #f8fafc; }
+
+/* 7. Links */
+main a {
+    color: #2466a5;
+    text-decoration: none;
+}
+main a:hover { text-decoration: underline; }
+
+/* 8. Footer */
+footer {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 16px;
+    text-align: center;
+    color: #667085;
+    font-size: 14px;
+}
+
+/* 9. Mobile */
+@media screen and (max-width: 600px) {
+    body { padding: 12px 8px; }
+    header { padding: 26px 15px; }
+    header h1 { font-size: 27px; overflow-wrap: anywhere; }
+    main { padding: 22px 16px; }
+    section h2 { font-size: 19px; }
+    table { font-size: 13px; }
+    th, td { padding: 7px 5px; overflow-wrap: anywhere; }
+}
